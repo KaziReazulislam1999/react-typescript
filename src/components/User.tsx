@@ -2,12 +2,14 @@ import React from "react";
 
 //built in data type : string , number, boolean ,void , null
 
-const User = (props: {
+type UserProps = {
   name: string;
   age: number;
   email: string;
   isRegistered: boolean;
-}) => {
+};
+
+const User = (props: UserProps) => {
   return (
     <div>
       <h2>{props.name}</h2>
