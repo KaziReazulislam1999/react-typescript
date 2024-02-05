@@ -1,28 +1,40 @@
 import React from "react";
 import "./App.css";
 import User from "./components/User";
+import UserDemo from "./components/UserDemo";
 
-function App() {
-  const user1 = {
-    name: "Kazi Monjurul Islam",
+const users = [
+  {
+    id: 1,
+    name: "Monjurul Islam",
+    email: "monjurulislam@gmail.com",
     age: 55,
-    email: "kazimonjurul@gmail.com",
-    isRegistered: true,
-    lang: ["Bangla", "English"],
-  };
+  },
 
-  const user2 = {
-    name: "Kazi Reazul Islam",
-    age: 24,
-    email: "kazireazul1999@gmail.com",
-    isRegistered: true,
-    lang: ["Bangla"],
-  };
+  {
+    id: 3,
+    name: "Akibul Islam",
+    email: "akibulislam@gmail.com",
+    age: 25,
+  },
+  {
+    id: 4,
+    name: "Nazrul Islam",
+    email: "nazrulislam@gmail.com",
+    age: 40,
+  },
+  {
+    id: 5,
+    name: "Mustafizur Islam",
+    email: "mustafizur@gmail.com",
+    age: 30,
+  },
+];
+function App() {
   return (
     <div className="App">
       <h2>User Management</h2>
-      <User user={user1} />
-      <User user={user2} />
+      <UserDemo users={users} />
     </div>
   );
 }
