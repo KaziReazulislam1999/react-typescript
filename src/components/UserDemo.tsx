@@ -10,16 +10,17 @@ type UserDemoProps = {
 };
 
 const UserDemo = ({ users }: UserDemoProps) => {
-  console.log(users);
   return (
     <div>
       {users.map((user, index) => {
+        const { id, name, email, age } = user;
+
         return (
-          <div key={user.id}>
-            <h1>{user.id}</h1>
-            <h2>{user.name}</h2>
-            <h3>{user.email}</h3>
-            <h3>{user.age}</h3>
+          <div key={id}>
+            <h1>{id}</h1>
+            <h2>{name}</h2>
+            <h3>{email}</h3>
+            <h3>{age}</h3>
           </div>
         );
       })}
