@@ -5,24 +5,30 @@ import React from "react";
 //user defined types -> array, object, enum,union, any , custom type
 
 type UserProps = {
-  name: string;
-  age: number;
-  email: string;
-  isRegistered: boolean;
-  lang: string[];
+  user: {
+    name: string;
+    age: number;
+    email: string;
+    isRegistered: boolean;
+    lang: string[];
+  };
 };
 
-const User = ({ name, age, email, isRegistered, lang }: UserProps) => {
+const User = ({ user }: UserProps) => {
   return (
     <div>
-      <h2>{name}</h2>
-      <p>{email}</p>
-      <p>{age} years old</p>
+      <h2>{user.name}</h2>
+      <p>{user.email}</p>
+      <p>{user.age} years old</p>
       <p>
-        {isRegistered ? <p>Registered User</p> : <p>User Not Registered</p>}
+        {user.isRegistered ? (
+          <p>Registered User</p>
+        ) : (
+          <p>User Not Registered</p>
+        )}
       </p>
       <p>
-        {lang.map((language, index) => {
+        {user.lang.map((language, index) => {
           return <span key={index}> {language} </span>;
         })}
       </p>
