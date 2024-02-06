@@ -1,29 +1,26 @@
 import React, { useState } from "react";
 import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
+type User = {
+  id: number;
+  name: string;
+};
 
-  const handleIncrement = () => {
-    return setCount(count + 1);
+function App() {
+  const [user, setUser] = useState<null | User>(null);
+
+  const handleAddUser = () => {
+    setUser({
+      id: 1,
+      name: "Reazul",
+    });
+    console.log(user);
   };
-  const handleDecrement = () => {
-    return setCount(count - 1);
-  };
-  const handleReset = () => {
-    return setCount(0);
-  };
+
   return (
     <div className="App">
-      <h1>Counter App</h1>
-      <h2>Count: {count}</h2>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement} disabled={count === 0}>
-        Decrement
-      </button>
-      <button onClick={handleReset} disabled={count === 0}>
-        Reset
-      </button>
+      <button onClick={handleAddUser}>Add Users</button>
+      <p>{user?.name}</p>
     </div>
   );
 }
