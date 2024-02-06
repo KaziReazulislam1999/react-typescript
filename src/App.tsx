@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
+import Button from "./components/Button";
+import Post from "./components/Post";
 
-import DataFetch from "./components/DataFetch";
-
-const users = [];
 function App() {
   return (
     <div className="App">
-      <h2>User Management</h2>
-      <DataFetch status="loading" />
+      <h2>Children Props</h2>
+      <Button>Click Me</Button>
+      <Post />
     </div>
   );
 }
