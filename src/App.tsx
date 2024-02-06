@@ -7,7 +7,7 @@ type User = {
 };
 
 function App() {
-  const [user, setUser] = useState<null | User>(null);
+  const [user, setUser] = useState<User>({} as User);
 
   const handleAddUser = () => {
     setUser({
