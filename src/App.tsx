@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import NewUser from "./components/NewUser";
+import NewUserFormEvents from "./components/NewUserFormEvents";
 
 function App() {
   return (
     <div className="App">
-      <h1>Typing Events</h1>
-      <NewUser />
+      <h1>Typing Form Event</h1>
+      <NewUserFormEvents />
     </div>
   );
 }
